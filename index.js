@@ -14,3 +14,9 @@ const tutorials = [
 const titleCased = () => {
   return tutorials
 }
+  return tutorials.map(tutorial => {
+    return tutorial.replace(/\b\w/g, firstLetter => firstLetter.toUpperCase());
+  });
+};
+
+console.log(titleCased());
